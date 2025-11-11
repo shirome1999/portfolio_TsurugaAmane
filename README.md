@@ -33,9 +33,39 @@ CREATE TABLE AnimalTable (
 INSERT INTO AnimalTable (Name, Species, DateOfBirth, Gender, Enclosure)
 VALUES ('LELE', 'Panda', '2025-11-11', 'Female', 'Cute Zone');
 
+```sql
 SELECT * FROM AnimalTable;
+
 +-----------+------+---------+-------------+--------+-----------+
 | animal_id | Name | Species | DateOfBirth | Gender | Enclosure |
 +-----------+------+---------+-------------+--------+-----------+
 |         1 | LELE | Panda   | 2025-11-11  | Female | Cute Zone |
 +-----------+------+---------+-------------+--------+-----------+
+
+
+## ZooDatabase_All.sqlの説明
+このファイルには、ZooDBデータベースを構築・操作するための一連のSQLコードをまとめています。  
+具体的には以下の操作を含みます：
+
+- データベースとテーブルの作成（CREATE DATABASE / CREATE TABLE）
+- データの追加（INSERT）
+- データの更新（UPDATE）
+- データの削除（DELETE）
+- 条件分岐による分類（CASE文）
+- 並び替え（ORDER BY）
+
+ZooDatabase_All.sql を実行することで、SQLの基本操作（CRUD）から応用的なクエリまでを一通り確認できます。  
+ポートフォリオとして「SQLを使ってデータベースを設計・操作できる」ことを示すサンプルです。
+
+## 実行結果スクリーンショット参照先
+![AnimalTable結果](images/AnimalTable.png)
+
+## Skills & Learning
+- SQL基礎: CREATE, INSERT, SELECT, UPDATE, DELETE
+- 条件分岐: CASE文
+- 並び替え: ORDER BY
+- データベース設計の基本理解
+
+## Future Work
+- ER図を作成してデータベース設計を可視化
+- JavaやRPAとの連携による業務改善シナリオへの応用
