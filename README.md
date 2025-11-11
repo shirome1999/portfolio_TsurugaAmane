@@ -61,7 +61,7 @@ ZooDatabase_All.sql を実行することで、SQLの基本操作（CRUD）か�
 ![AnimalTable結果](images/AnimalTable.png)
 
 ## Skills & Learning
-- SQL基礎: CREATE, INSERT, SELECT, UPDATE, DELETE
+- SQL基礎: CREATE, INSERT, SELECT, UPDATE, DELETE,JOIN
 - 条件分岐: CASE文
 - 並び替え: ORDER BY
 - データベース設計の基本理解
