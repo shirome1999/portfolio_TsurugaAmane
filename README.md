@@ -33,8 +33,7 @@ CREATE TABLE AnimalTable (
 INSERT INTO AnimalTable (Name, Species, DateOfBirth, Gender, Enclosure)
 VALUES ('LELE', 'Panda', '2025-11-11', 'Female', 'Cute Zone');
 
-```sql
-SELECT * FROM AnimalTable;
+```
 
 +-----------+------+---------+-------------+--------+-----------+
 | animal_id | Name | Species | DateOfBirth | Gender | Enclosure |
@@ -61,7 +60,7 @@ ZooDatabase_All.sql を実行することで、SQLの基本操作（CRUD）か�
 ![AnimalTable結果](images/AnimalTable.png)
 
 ## Skills & Learning
-- SQL基礎: CREATE, INSERT, SELECT, UPDATE, DELETE,JOIN
+- SQL基礎: CREATE, INSERT, SELECT, UPDATE, DELETE, JOIN
 - 条件分岐: CASE文
 - 並び替え: ORDER BY
 - データベース設計の基本理解
