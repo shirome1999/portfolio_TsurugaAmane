@@ -42,6 +42,22 @@ VALUES ('KIKI', 'Koala', '2024-03-15', 'Female', 'Tree Zone'),
 -- 並び替え
 SELECT * FROM AnimalTable
 ORDER BY Enclosure ASC, Name ASC;
+
+CREATE TABLE EnclosureTable (
+    enclosure_id INT PRIMARY KEY AUTO_INCREMENT,
+    Enclosure VARCHAR(50),
+    Location VARCHAR(50)
+);
+
+INSERT INTO EnclosureTable (Enclosure, Location)
+VALUES ('Cute Zone', 'East Area'),
+       ('Dangerous Zone', 'West Area'),
+       ('Play Zone', 'South Area'),
+       ('Tree Zone', 'North Area');
+
+SELECT a.Name, a.Species, e.Location
+FROM AnimalTable a
+JOIN EnclosureTable e ON a.Enclosure = e.Enclosure;
 ```
 
 ### 実行結果
@@ -49,10 +65,10 @@ ORDER BY Enclosure ASC, Name ASC;
 +-----------+------+---------+-------------+--------+----------------+
 | animal_id | Name | Species | DateOfBirth | Gender | Enclosure      |
 +-----------+------+---------+-------------+--------+----------------+
-|         6 | LELE | Panda   | 2025-11-11  | Female | Cute Zone      |
 |         2 | MEME | Lion    | 2025-11-10  | Male   | Dangerous Zone |
+|         3 | KIKI | Koala   | 2024-03-15  | Female | Tree Zone      |
 |         4 | TOTO | Tiger   | 2022-07-01  | Male   | Dangerous Zone |
 |         5 | MOMO | Monkey  | 2023-09-20  | Female | Play Zone      |
-|         3 | KIKI | Koala   | 2024-03-15  | Female | Tree Zone      |
+|         6 | LELE | Panda   | 2025-11-11  | Female | Cute Zone      |
 +-----------+------+---------+-------------+--------+----------------+
 ```
