@@ -36,18 +36,23 @@ WHERE animal_id = 1;
 INSERT INTO AnimalTable (Name, Species, DateOfBirth, Gender, Enclosure)
 VALUES ('KIKI', 'Koala', '2024-03-15', 'Female', 'Tree Zone'),
        ('TOTO', 'Tiger', '2022-07-01', 'Male', 'Dangerous Zone'),
-       ('MOMO', 'Monkey', '2023-09-20', 'Female', 'Play Zone');
+       ('MOMO', 'Monkey', '2023-09-20', 'Female', 'Play Zone'),
+       ('LELE', 'Panda', '2025-11-11', 'Female', 'Cute Zone');
 
 -- 並び替え
 SELECT * FROM AnimalTable
 ORDER BY Enclosure ASC, Name ASC;
+```
 
-## 実行結果
+### 実行結果
+```
 +-----------+------+---------+-------------+--------+----------------+
 | animal_id | Name | Species | DateOfBirth | Gender | Enclosure      |
 +-----------+------+---------+-------------+--------+----------------+
+|         6 | LELE | Panda   | 2025-11-11  | Female | Cute Zone      |
 |         2 | MEME | Lion    | 2025-11-10  | Male   | Dangerous Zone |
 |         4 | TOTO | Tiger   | 2022-07-01  | Male   | Dangerous Zone |
 |         5 | MOMO | Monkey  | 2023-09-20  | Female | Play Zone      |
 |         3 | KIKI | Koala   | 2024-03-15  | Female | Tree Zone      |
 +-----------+------+---------+-------------+--------+----------------+
+```
