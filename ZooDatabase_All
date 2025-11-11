@@ -1,1 +1,53 @@
+# ZooDatabase_All
 
+## SQL Code
+
+```sql
+CREATE DATABASE ZooDB;
+USE ZooDB;
+
+CREATE TABLE AnimalTable (
+    animal_id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(50),
+    Species VARCHAR(50),
+    DateOfBirth DATE,
+    Gender VARCHAR(10),
+    Enclosure VARCHAR(50)
+);
+
+-- データ追加
+INSERT INTO AnimalTable (Name, Species, DateOfBirth, Gender, Enclosure)
+VALUES ('LELE', 'Panda', '2025-11-11', 'Female', 'Cute Zone');
+
+-- データ更新
+UPDATE AnimalTable
+SET Name = 'MEME',
+    Species = 'Lion',
+    DateOfBirth = '2025-11-10',
+    Gender = 'Male',
+    Enclosure = 'Dangerous Zone'
+WHERE animal_id = 2;
+
+-- データ削除
+DELETE FROM AnimalTable
+WHERE animal_id = 1;
+
+-- 複数データ追加
+INSERT INTO AnimalTable (Name, Species, DateOfBirth, Gender, Enclosure)
+VALUES ('KIKI', 'Koala', '2024-03-15', 'Female', 'Tree Zone'),
+       ('TOTO', 'Tiger', '2022-07-01', 'Male', 'Dangerous Zone'),
+       ('MOMO', 'Monkey', '2023-09-20', 'Female', 'Play Zone');
+
+-- 並び替え
+SELECT * FROM AnimalTable
+ORDER BY Enclosure ASC, Name ASC;
+
+## 実行結果
++-----------+------+---------+-------------+--------+----------------+
+| animal_id | Name | Species | DateOfBirth | Gender | Enclosure      |
++-----------+------+---------+-------------+--------+----------------+
+|         2 | MEME | Lion    | 2025-11-10  | Male   | Dangerous Zone |
+|         4 | TOTO | Tiger   | 2022-07-01  | Male   | Dangerous Zone |
+|         5 | MOMO | Monkey  | 2023-09-20  | Female | Play Zone      |
+|         3 | KIKI | Koala   | 2024-03-15  | Female | Tree Zone      |
++-----------+------+---------+-------------+--------+----------------+
